@@ -1,0 +1,31 @@
+body {display: flex;flex-direction: column;min-height: 100vh;margin: 0;padding: 0;font-family: 'Segoe UI', Tahoma, Geneva,
+     Verdana, sans-serif;background-color: #f4f4f4;}
+header {background-color: #475f74;color: #fff;padding: 1rem;text-align: center;}
+header h1 {margin: 0;display: flex;align-items: center;justify-content: center;flex-grow: 1;}
+header h1 img {max-width: 40px;margin-right: 10px;}
+main {flex: 1;padding: 20px;}
+main button.back-to-home {background-color: #ddd;color: #475f74;border: none;padding: 10px;cursor: pointer;
+    border-radius: 5px;transition: background-color 0.3s; /* Add a smooth transition effect */}
+main button.back-to-home:hover {background-color: #fff; /* Set the hover background color */}
+h2 {color: #744d47;margin: 10px 0 0 20px;display: inline-block; /* Make the h2 display as an inline-block */}
+#bookmarksList {list-style: none;padding: 0;}
+#bookmarksList li {background-color: #fff;border: 1px solid #868686;border-radius: 5px;margin-bottom: 10px;
+    padding: 10px;}
+#bookmarksList button {padding: 5px 10px;margin-left: 5px; /* Adjust the margin to control the spacing */cursor: pointer;}
+/* Optional: Adjust button styles for better visibility */
+#bookmarksList button.update {background-color: #4caf50; /* Green */color: white;border: none;}
+#bookmarksList button.delete {background-color: #f44336; /* Red */color: white;border: none;}
+#countryListMap {display: flex;justify-content: space-between;margin-top: 20px;background-color:#dfe8f181;
+    border-radius: 15px;}
+#column1,#column2,#column3 {list-style-type: none;padding: 20px;}
+.flag {width: 50px; /* Adjust the width of the flags */height: 30px; /* Adjust the height of the flags */
+    margin-right: 8px; /* Add some spacing between the flag and country name */}
+#column1 li,#column2 li,#column3 li {margin-bottom: 30px;}
+footer {background-color: #475f74;color: #fff;padding: 10px;text-align: center;margin-top: auto; 
+    /* Push the footer to the bottom */}
+.countyListi {background-color: #e4e4e4f6;border: 1px solid #ccc;padding: 10px;margin: 10px;width: calc(33.33% - 20px);
+     /* Adjust the width based on your preference */display: inline-block;box-sizing: border-box;}
+#countries-list,#countries-list2,#countries-list3,#countries-list4,#countries-list5,#countries-list6,#countries-list7 {
+    margin-left: 10%;margin-top: 20px;}
+#countries-list table {gap: 20px;}
+

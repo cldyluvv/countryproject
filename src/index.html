@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoSphere Pro</title>
+    <link rel="icon" href="static/globe.png" type="image/x-icon">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="fetchapi.js"></script> 
+    <script src="display.js"></script>
+    <script src="continents.js"></script>
+</head>
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="flags.html">Flags</a>
+        <a href="currency.html">Currencies</a>
+        <a href="bookmark.html">Bookmark</a>
+    </div>
+    <header>
+        <span style="font-size:40px;" onclick="openNav()">&#9776; </span>
+        <div class="header-left">
+            <h1>GeoSphere Pro</h1>
+            <div class="header-search">
+                <input type="text" id="searchInput" placeholder="Search...">
+                <button type="button" onclick="searchCountry()"><i class="fa fa-search"></i></button>
+            </div>            
+        </div>
+        <div class="header-center">
+            <a href="index.html"><img src="static/globe.png" alt="GeoSphere Logo"></a>
+        </div>
+        <div class="header-right">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="flags.html">
+                            All Countries
+                            <ul id="countryList"></ul>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="allc.html" onmouseover="showContinentList()" onmouseout="hideContinentList()" onclick="navigateToContinentPage()">
+                            All Continents
+                            <ul id="continentList"></ul>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <h1 style="color: #744d47;">Topics</h1>
+        <div class="image-grid">
+            <a href="maps.html" class="image-item">
+                <img src="static/map.gif" alt="Map">
+                <div class="caption">World Map</div>
+            </a>
+            <a href="cultures.html" class="image-item">
+                <img src="static/cultures.jpg" alt="Cultures">
+                <div class="caption">Cultures</div>
+            </a>
+            <a href="language.html" class="image-item">
+                <img src="static/language.png" alt="Good">
+                <div class="caption">Language</div>
+            </a>
+            <a href="population.html" class="image-item">
+                <img src="static/populations.jpeg" alt="Populations">
+                <div class="caption">Populations</div>
+            </a>            
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 GeoSphere Pro. All rights reserved.</p>
+    </footer>
+    <script>
+        // Side Nav Open and Close 
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }  
+    </script> 
+</body>
+</html>
+
+

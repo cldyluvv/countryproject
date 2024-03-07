@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maps</title>
+    <link rel="icon" href="static/globe.png" type="image/x-icon">
+    <link rel="stylesheet" href="bookmark.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="bookmark.js"></script>
+    <script src="fetchapi.js"></script>
+</head>
+<body>
+    <header>
+        <h1>GeoSphere Pro <img src="static/globe.png"> </h1>
+    </header>
+    <main>
+        <button class="back-to-home" onclick="goBackHome()"><i class="fa fa-arrow-left"></i> Back</button>
+        <h2>Maps of the WORLD</h2>
+        <div id="countryListMap">
+            <ul id="column1"></ul>
+            <ul id="column2"></ul>
+            <ul id="column3"></ul>
+        </div>                       
+    </main>
+    <footer>
+        <p>&copy; 2024 GeoSphere Pro. All rights reserved.</p>
+    </footer>
+</body>
+</html>

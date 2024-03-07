@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continents</title>
+    <link rel="icon" href="static/globe.png" type="image/x-icon">
+    <link rel="stylesheet" href="bookmark.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="bookmark.js"></script>
+    <style>
+        /* Add your CSS styling for the boxes */
+        .box {width: calc(25% - 20px); /* Adjust the width as needed */margin: 30px 0 0 50px;background-color:
+        #e0e0e0;padding: 20px;box-sizing: border-box;display: inline-block;margin-left: 85px;text-decoration: 
+        none; /* Remove default underline from links */color: #333; /* Set link color */}.box-1 {width: 
+        calc(25% - 20px); /* Adjust the width as needed */margin: 30px 0 0 50px;background-color: #e0e0e0;
+        padding: 20px;box-sizing: border-box;display: inline-block;margin-left: 37%;text-decoration: none; 
+        /* Remove default underline from links */color: #333; /* Set link color */}.box:hover,.box-1:hover {
+        background-color: #6a9eff; /* Change background color on hover */}
+    </style>   
+</head>
+<body>
+    <header>
+        <h1>GeoSphere Pro <img src="static/globe.png"> </h1>
+    </header>
+    <main>
+        <button class="back-to-home" onclick="goBackHome()"><i class="fa fa-arrow-left"></i> Back</button>
+        <h2>7 Continents in the WORLD</h2>
+        <div id="continentListTip">
+            <!-- Add 7 boxes here with links -->
+            <a href="Europe.html" class="box">Europe</a>
+            <a href="Africa.html" class="box">Africa</a>
+            <a href="NorthA.html" class="box">North America</a>
+            <a href="Oceania.html" class="box">Oceania</a>
+            <a href="SouthA.html" class="box">South America</a>
+            <a href="Asia.html" class="box">Asia</a>
+            <a href="Antarctica.html" class="box-1">Antarctica</a>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 GeoSphere Pro. All rights reserved.</p>
+    </footer>
+</body>
+</html>

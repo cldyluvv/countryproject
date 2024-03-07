@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currencies</title>
+    <link rel="icon" href="static/globe.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="fetchapi.js"></script>
+    <script src="bookmark.js"></script>
+</head>
+<body>
+    <header>
+        <h1>GeoSphere Pro <img src="static/globe.png"> </h1>
+    </header>
+    <main>
+        <button class="back-to-home" onclick="goBackHome()"><i class="fa fa-arrow-left"></i> Back</button>
+        <h2>Money and Currencies</h2>
+        <button class="currency-converter-1" onclick="goCurrencyConverter()">Currency Converter   <i class="fa fa-arrow-right"></i></button>
+        <div class="grid-container" id="fetchCurrencyForCountries">
+            <div>Afghanistan <img src="notes/Afghanistan.jpeg"></div>
+            <div>Albania <img src="notes/Albania.jpeg"></div>
+            <div>Algeria<img src="notes/Algeria.jpeg"></div>  
+            <div>American Samoa<img src="notes/Amrican Samoa.jpeg"></div>
+            <div>Andorra<img src="notes/Andorra.jpeg"></div>
+            <div>Anguilla<img src="notes/Anguilla.jpeg"></div>
+            <div>Antartica<img src="notes/Antartica.jpeg"></div>
+            <div>Antigua and Barbuda<img src="notes/Anguilla.jpeg"></div>
+            <div>Armenia<img src="notes/Armenia.jpeg"></div>
+            <div>Aruba<img src="notes/Aruba.jpeg"></div>
+            <div>Australia<img src="notes/Australia.jpeg"></div>
+            <div>Austria<img src="notes/Austria.jpeg"></div>
+            <div>Azerbaijan<img src="notes/Azerbaijan.jpeg"></div> <!---->
+            <div>Bahrain<img src="notes/Bahrain.jpeg"></div>  
+            <div>Bangladesh<img src="notes/Bangladesh.jpeg"></div>
+            <div>Barbados<img src="notes/Barbados.jpeg"></div>
+            <div>Belarus<img src="notes/Belarus.jpeg"></div>
+            <div>Belgium<img src="notes/Belgium.jpeg"></div>
+            <div>Belize<img src="notes/Belize.jpeg"></div>
+            <div>Benin<img src="notes/Benin.jpeg"></div>
+            <div>Bermuda<img src="notes/Bermuda.jpeg"></div>  
+            <div>Bhutan<img src="notes/Bhutan.jpeg"></div>
+            <div>Bosnia and Herzegovina<img src="notes/Bosnia.jpeg"></div>
+            <div>Brazil<img src="notes/Brazil.jpeg"></div>
+            <div>British Virgin Islands<img src="notes/Britishv.jpeg"></div>  
+            <div>Brunei<img src="notes/Brunei.jpeg"></div>
+            <div>Bulgaria<img src="notes/Bulgaria.jpeg"></div>
+            <div>Burkina Faso<img src="notes/Bukinfaso.jpeg"></div>
+            <div>Burundi<img src="notes/Burundi.jpeg"></div> <!---->
+            <div>Cambodia<img src="notes/Cambodia.jpeg"></div>
+            <div>Cameroon<img src="notes/Cameroon.jpeg"></div>
+            <div>Cape Verde<img src="notes/Capeve.jpeg"></div>
+            <div>Cayman Islands<img src="notes/Cayman.jpeg"></div>
+            <div>Central African Republic<img src="notes/Centrala.jpeg"></div>
+            <div>Chad<img src="notes/Chad.jpeg"></div>
+            <div>Chile<img src="notes/Chile.jpeg"></div>
+            <div>China<img src="notes/China.jpeg"></div>  
+            <div>Christmas Island<img src="notes/Australia.jpeg"></div>
+            <div>Cocos (Keeling) Islands<img src="notes/Australia.jpeg"></div>
+            <div>Colombia<img src="notes/Colombia.jpeg"></div>
+            <div>Comoros<img src="notes/Comoros.jpeg"></div>
+            <div>Cook Islands<img src="notes/Cook.jpeg"></div>
+            <div>Costa Rica<img src="notes/Costa.jpeg"></div>
+            <div>Croatia<img src="notes/Croatia.jpeg"></div>  
+            <div>Cuba<img src="notes/Cuba.jpeg"></div>
+            <div>Cyprus<img src="notes/Cyprus.jpeg"></div>
+            <div>Czechia<img src="notes/Czesch.jpeg"></div> <!---->
+            <div>Denmark<img src="notes/Denmark.jpeg"></div>
+            <div>Djibouti<img src="notes/Dj.jpeg"></div>  
+            <div>Dominica<img src="notes/Dc.jpeg"></div>
+            <div>Dominican Republic<img src="notes/DR.jpeg"></div>
+            <div>DR Congo<img src="notes/DRC.jpeg"></div> <!---->
+            <div>Ecuador<img src="notes/Ecuador.jpeg"></div>
+            <div>Egypt<img src="notes/Egypt.jpeg"></div>
+            <div>El Salvador<img src="notes/El.jpeg"></div>
+            <div>Equatorial Guinea<img src="notes/Eq.jpeg"></div>  
+            <div>Eritrea<img src="notes/Eri.jpeg"></div>
+            <div>Estonia<img src="notes/Estonia.jpeg"></div>
+            <div>Ethiopia<img src="notes/Etio.jpeg"></div>
+            <div>Falkland Islands<img src="notes/Falkland.jpeg"></div>
+            <div>Faroe Islands<img src="notes/Denmark.jpeg"></div>
+            <div>Fiji<img src="notes/Fiji.jpeg"></div>  
+            <div>Finland<img src="notes/Austria.jpeg"></div>
+            <div>France<img src="notes/france.jpg"></div> <!-- take note -->
+            <div>French Guiana<img src="notes/FranceG.jpeg"></div>
+            <div>French Polynesia<img src="notes/Austria.jpeg"></div>
+            <div>Gabon<img src="notes/Gabon.jpeg"></div> 
+            <div>Georgia<img src="notes/Georgia.jpeg"></div>
+            <div>Germany<img src="notes/Germany.jpeg"></div>
+            <div>Ghana<img src="notes/Ghana.jpeg"></div>
+            <div>Gibraltar<img src="notes/Gibraltar.jpeg"></div>
+            <div>Greece<img src="notes/Greece.jpeg"></div>
+            <div>Greenland<img src="notes/Greenland.jpeg"></div>
+            <div>Grenada<img src="notes/Grenada.jpeg"></div>  
+            <div>Guadeloupe<img src="notes/Guadeloupe.jpeg"></div>
+            <div>Guam<img src="notes/Guam.jpeg"></div>
+            <div>Guatemala<img src="notes/Guatemala.jpeg"></div>
+            <div>Guernsey<img src="notes/Guernsey.jpeg"></div>
+            <div>Guinea<img src="notes/Guinea.jpeg"></div>
+            <div>Guenia-Bissau<img src="notes/GuineaB.jpeg"></div>
+            <div>Guyana<img src="notes/Guyana.jpeg"></div>
+            <div>Haiti<img src="notes/H1.jpeg"></div>
+            <div>Honduras<img src="notes/H2.jpeg"></div>
+            <div>Hong Kong<img src="notes/H3.jpeg"></div>
+            <div>Hungary<img src="notes/H4.jpeg"></div>
+            <div>Iceland<img src="notes/I1.jpeg"></div>
+            <div>India<img src="notes/I2.jpeg"></div>
+            <div>Indonesia<img src="notes/I3.jpeg"></div>
+            <div>Iran<img src="notes/Iran.jpeg"></div>
+            <div>Iraq<img src="notes/Iraq.jpeg"></div>
+            <div>Ireland<img src="notes/Ireland.jpeg"></div>  
+            <div>Isle of Man<img src="notes/I4.jpeg"></div>
+            <div>Italy<img src="notes/Germany.jpeg"></div>
+            <div>Jamaica<img src="notes/Jamaica.jpeg"></div>
+            <div>Japan<img src="notes/Japan.jpeg"></div>
+            <div>Jersey<img src="notes/Jersey.jpeg"></div>
+            <div>Jordan<img src="notes/Jordan.jpeg"></div>
+            <div>Kazakhstan<img src="notes/K1.jpeg"></div>
+            <div>Kenya<img src="notes/K2.jpeg"></div>  
+            <div>Kiribati<img src="notes/Australia.jpeg"></div>
+            <div>Kuwait<img src="notes/Kuwait.jpg"></div> <!-- take note -->
+            <div>Kyrgyzstan<img src="notes/K3.jpeg"></div>
+            <div>Laos<img src="notes/K4.jpeg"></div>
+            <div>Latvia<img src="notes/K5.jpeg"></div>
+            <div>Lebanon<img src="notes/K8.jpeg"></div>
+            <div>Lesotho<img src="notes/K9.jpeg"></div>
+            <div>Liberia<img src="notes/K7.jpeg"></div>  
+            <div>Libya<img src="notes/K11.jpeg"></div>
+            <div>Liechtenstein<img src="notes/K10.jpeg"></div>
+            <div>Lithuania<img src="notes/K12.jpeg"></div>
+            <div>Luxembourg<img src="notes/K6.jpeg"></div>
+            <div>Macao<img src="notes/M1.jpeg"></div>
+            <div>Madagscar<img src="notes/M2.jpeg"></div>
+            <div>Malawi<img src="notes/M3.jpeg"></div>
+            <div>Malaysia<img src="notes/M4.jpeg"></div>
+            <div>Maldives<img src="notes/M5.jpeg"></div>  
+            <div>Mali<img src="notes/M6.jpeg"></div>
+            <div>Malta<img src="notes/M7.jpeg"></div>
+            <div>Marshall Islands<img src="notes/M8.jpeg"></div>
+            <div>Martinique<img src="notes/M9.jpeg"></div>
+            <div>Mauritania<img src="notes/M10.jpeg"></div>
+            <div>Mauritius<img src="notes/M11.jpeg"></div>
+            <div>Mayotte<img src="notes/M12.jpeg"></div>
+            <div>Mexico<img src="notes/M13.jpeg"></div>
+            <div>Micronesia<img src="notes/M14.jpeg"></div>  
+            <div>Moldova<img src="notes/M15.jpeg"></div>
+            <div>Monaco<img src="notes/monaco.jpeg"></div>
+            <div>Mongolia<img src="notes/M17.jpeg"></div>
+            <div>Monteserrat<img src="notes/M18.jpeg"></div>
+            <div>Morocco<img src="notes/M19.jpeg"></div>
+            <div>Mozambique<img src="notes/M20.jpeg"></div>
+            <div>Namibia<img src="notes/N1.jpeg"></div>  
+            <div>Nauru<img src="notes/N2.jpeg"></div>
+            <div>Nepal<img src="notes/N3.jpeg"></div>
+            <div>Netherlands<img src="notes/N4.jpeg"></div>
+            <div>New Caledonia<img src="notes/N5.jpeg"></div>
+            <div>New Zealand<img src="notes/N6.jpeg"></div>
+            <div>Nicaragua<img src="notes/N7.jpeg"></div>
+            <div>Niger<img src="notes/N8.jpeg"></div>
+            <div>Nigeria<img src="notes/N9.jpeg"></div>
+            <div>Niue<img src="notes/N10.jpeg"></div>  
+            <div>Norfolk Island<img src="notes/N11.jpeg"></div>
+            <div>North Korea<img src="notes/N12.jpeg"></div>
+            <div>Northen Mariana Islands<img src="notes/N13.jpeg"></div>
+            <div>Norway<img src="notes/N14.jpeg"></div>
+            <div>Oman<img src="notes/Oman.jpeg"></div>
+            <div>Pakistan<img src="notes/Pakistan.jpeg"></div>
+            <div>Panama<img src="notes/Panama.jpeg"></div>
+            <div>Papua New Guinea<img src="notes/P1.jpeg"></div>  
+            <div>Paraguay<img src="notes/P2.jpeg"></div>
+            <div>Peru<img src="notes/P3.jpeg"></div>
+            <div>Pitcairn Islands<img src="notes/P4.jpeg"></div>
+            <div>Poland<img src="notes/P5.jpeg"></div>
+            <div>Portugal<img src="notes/P6.jpeg"></div>
+            <div>Puerto Rico<img src="notes/P7.jpeg"></div>
+            <div>Qatar<img src="notes/Qatar.jpeg"></div>
+            <div>Republic of Congo Reunion<img src="notes/R1.jpeg"></div>
+            <div>Romania<img src="notes/R2.jpeg"></div>
+            <div>Russia<img src="notes/R3.jpeg"></div>  
+            <div>Rwanda<img src="notes/R4.jpeg"></div>
+            <div>Saint Helena, Ascension and Tristan da Cunha<img src="notes/S1.jpeg"></div>
+            <div>Saint Kitts and Nevis<img src="notes/S2.jpeg"></div>
+            <div>Saint Lucia<img src="notes/S2.jpeg"></div>
+            <div>Saint Pierre and Miquelon<img src="notes/S4.jpeg"></div>
+            <div>Saint Vincent and the Grenadines<img src="notes/S2.jpeg"></div>
+            <div>Samoa<img src="notes/S5.jpeg"></div>
+            <div>San Marino<img src="notes/S6.jpeg"></div>
+            <div>Sao Tome and Pricipe<img src="notes/S7.jpeg"></div>  
+            <div>Saudi Arabia<img src="notes/S8.jpeg"></div>
+            <div>Senegal<img src="notes/S9.jpeg"></div>
+            <div>Seychelles<img src="notes/S10.jpeg"></div>
+            <div>Sierra Leone<img src="notes/S11.jpeg"></div>
+            <div>Singapore<img src="notes/S12.jpeg"></div>
+            <div>Sint Maarten<img src="notes/S13.jpeg"></div>
+            <div>Slovakia<img src="notes/S14.jpeg"></div>
+            <div>Slovenia<img src="notes/S15.jpeg"></div>
+            <div>Solomon Islands<img src="notes/S4.jpeg"></div>
+            <div>Somalia<img src="notes/S16.jpeg"></div>  
+            <div>South Africa<img src="notes/S17.jpeg"></div>
+            <div>South Korea<img src="notes/S18.jpeg"></div>
+            <div>Sri Lanka<img src="notes/S19.jpeg"></div>
+            <div>Sudan<img src="notes/S20.jpeg"></div>
+            <div>Suriname<img src="notes/S21.jpeg"></div>
+            <div>Svalbard and Jan Mayen<img src="notes/S22.jpeg"></div>
+            <div>Sweden<img src="notes/S23.jpeg"></div>
+            <div>Switzerland<img src="notes/S24.jpeg"></div>  
+            <div>Syria<img src="notes/S25.jpeg"></div>
+            <div>Taiwan<img src="notes/T1.jpeg"></div>
+            <div>Tajikistan<img src="notes/T2.jpeg"></div>
+            <div>Tanzania<img src="notes/T4.jpeg"></div>
+            <div>Thailand<img src="notes/T5.jpeg"></div>
+            <div>Tokelau<img src="notes/T6.jpeg"></div>
+            <div>Tonga<img src="notes/T7.jpeg"></div>
+            <div>Trinidad and Tobago<img src="notes/T8.jpeg"></div>
+            <div>Tunisia<img src="notes/T9.jpeg"></div>
+            <div>Turkmenistan<img src="notes/T10.jpeg"></div>
+            <div>Turks and Caicos Islands<img src="notes/T11.jpeg"></div>
+            <div>Uganda<img src="notes/Uganda.jpeg"></div>
+            <div>Ukraine<img src="notes/Ukraine.jpeg"></div>
+            <div>United Arab Emirates<img src="notes/UAE.jpeg"></div>
+            <div>United Kingdom<img src="notes/UK.jpeg"></div>
+            <div>United States<img src="notes/USA.jpeg"></div>
+            <div>Uruguay<img src="notes/Uruguay.jpeg"></div>
+            <div>Uzbekistan<img src="notes/Uzbek.jpeg"></div>
+            <div>Vanuatu<img src="notes/Vanuatu.jpeg"></div>
+            <div>Venezuela<img src="notes/Venezuela.jpeg"></div>
+            <div>Vietnam<img src="notes/Vietnam.jpeg"></div>
+            <div>Wallis and Futuna<img src="notes/Germany.jpeg"></div>
+            <div>Western Sahara<img src="notes/Western.jpeg"></div>
+            <div>Yemen<img src="notes/Yemen.jpeg"></div>
+            <div>Zambia<img src="notes/Zambia.jpeg"></div>
+            <div>Zimbabwe<img src="notes/Zimbabwe.jpeg"></div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 GeoSphere Pro. All rights reserved.</p>
+    </footer>
+</body>
+</html>

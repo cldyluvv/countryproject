@@ -1,0 +1,116 @@
+body {display: flex;flex-direction: column;min-height: 100vh;margin: 0;padding: 0;font-family: 'Segoe UI', Tahoma, 
+Geneva, Verdana, sans-serif;background-color: #f4f4f4;}
+header {background-color: #475f74;color: #fff;padding: 1rem;text-align: center;}
+header h1 {margin: 0;display: flex;align-items: center;justify-content: center; /* Center the content horizontally */
+flex-grow: 1; /* Allow the h1 to take the available space and push the button to the left */}
+header h1 img {max-width: 40px; /* Set the maximum width of the image */margin-right: 10px; /* Add some right margin 
+to the image */}footer {background-color: #475f74;color: #fff;padding: 10px;text-align: center;
+margin-top: auto; /* Push the footer to the bottom */}
+#flagsContainer {display: grid;grid-template-columns: repeat(4, 1fr);gap: 10px;justify-content: center; /* Optional:
+Center the grid on the page */}.flag-box {text-align: center;background-color: rgba(211, 211, 211, 0.5); /*
+Add background color for each box */padding: 10px; /* Add padding for better visual appearance */
+border-radius: 8px; /* Add border-radius for rounded corners */}
+.flag-image {width: 100px; /* Adjust the size of the flags */height: auto;margin-bottom: 5px; /* Add space 
+between flag and country name */}
+.country-name {
+    font-size: 14px;
+    color: #333; /* Adjust the color as needed */
+}
+main {
+    flex: 1;
+    padding: 20px;
+}
+main button.back-to-home {
+    background-color: #ddd; /* Set the background color */
+    color: #475f74; /* Set the text color */
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s; /* Add a smooth transition effect */
+    margin-bottom: 10px;
+}
+main button.back-to-home:hover {
+    background-color: #fff; /* Set the hover background color */
+}
+main button.currency-converter-1 {
+    background-color: #ddd; /* Set the background color */
+    color: #475f74; /* Set the text color */
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s; /* Add a smooth transition effect */
+    margin-bottom: 10px;
+    margin-left: 60%;
+}
+main button.currency-converter-1:hover {
+    background-color: #fff; /* Set the hover background color */
+}
+h2 {
+    color: #744d47;
+    margin: 10px 0 0 20px;
+    display: inline-block; /* Make the h2 display as an inline-block */
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 10px;
+    background-color: rgba(211, 211, 211, 0.5);
+    padding: 33px;
+}
+.grid-container div {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.521);
+    text-align: center;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.grid-container img {
+    width: 100%; /* Ensure images take up the full width of their container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 200px; /* Set a maximum width to avoid excessively large images */
+    border: 1px solid #ddd; /* Add a border for better visibility */
+    border-radius: 8px; /* Add rounded corners for better aesthetics */
+}
+.converter-box {
+    width: 80%; /* Set the width of the box, you can adjust the percentage as needed */
+    max-width: 400px; /* Set a maximum width to ensure it doesn't become too wide */
+    background-color: #fff; /* Set the background color of the box */
+    border: 1px solid #ddd; /* Add a border for better visibility */
+    border-radius: 8px; /* Add rounded corners for aesthetics */
+    padding: 20px; /* Add padding inside the box */
+    margin: 20px auto; /* Center the box horizontally using auto margins */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    text-align: left; /* Center text inside the box */
+}
+.converter-box label,
+.converter-box input,
+.converter-box select,
+.converter-box button {
+    font-size: 20px; /* Set the text size for labels, input, select, and button */
+    margin-bottom: 10px;
+}
+main button.currency-converter {
+    background-color: #5cb85c; /* Set the background color */
+    color: #fff; /* Set the text color */
+    border: none;
+    padding: 12px; /* Increase the padding for better clickability */
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s; /* Add a smooth transition effect */
+    margin-top: 10px; /* Adjust margin from the top */
+    margin-left: 150px;
+}
+main button.currency-converter:hover {
+    background-color: #4cae4c; /* Set the hover background color */
+}
+.converted-text {
+    text-align: center;
+    margin-top: 10px; /* Adjust the top margin as needed */
+    color: #333; /* Adjust the color as needed */
+    font-size: larger;
+}
